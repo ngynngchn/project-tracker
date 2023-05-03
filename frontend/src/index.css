@@ -1,0 +1,82 @@
+:root {
+	font-family: "Oswald";
+	line-height: 1.5;
+	font-weight: 400;
+
+	/* color-scheme: light dark; */
+	color: var(--text-100);
+	background-color: var(--bg-100);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+
+	--primary-100: #ffb6b9;
+	--primary-200: #df999c;
+	--primary-300: #98585c;
+	--accent-100: #ffd3b5;
+	--accent-200: #997358;
+	--text-100: #5d534f;
+	--text-200: #8a7f7b;
+	--bg-100: #f5f4f4;
+	--bg-200: #ebeaea;
+	--bg-300: #c2c1c1;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "Oswald";
+	src: url("./assets/fonts/Oswald-VariableFont_wght.ttf");
+}
+a {
+	font-weight: 500;
+	color: var(--bg-300);
+	text-decoration: inherit;
+	font-size: 3rem;
+}
+a:hover {
+	color: var(--primary-200);
+}
+
+.active {
+	color: var(--primary-200);
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+h1 {
+	font-size: 3.2em;
+	line-height: 1.1;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	color: var(--text-200);
+	gap: 0.5rem;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 4px 8px;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: var(--primary-200);
+	cursor: pointer;
+	transition: border-color 0.25s;
+}
+button:hover {
+	border-color: var(--primary-100);
+}
+button:focus,
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+}

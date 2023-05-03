@@ -1,0 +1,79 @@
+.header {
+	margin: 1rem 0;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+/* * OVERVIEW */
+
+.overview-container,
+.active-timer {
+	border-radius: 10px;
+	margin: 2vw;
+	padding: 1rem;
+	position: relative;
+	background-color: var(--bg-200);
+	box-shadow: inset rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+		rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card {
+	padding: 1rem 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	border-bottom: 1px solid var(--bg-300);
+}
+
+.actions,
+.timer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	justify-items: start;
+}
+
+/* * DASHBOARD */
+.dashboard-window header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	background-color: var(--bg-200);
+}
+
+main {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+/* * LAYOUT */
+
+.layout {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: min-content auto;
+}
+
+.layout aside {
+	padding: 1rem;
+	background-color: var(--bg-200);
+}
+
+input {
+	padding: 8px;
+	border: none;
+	border-radius: 3px;
+	background-color: var(--bg-100);
+}
+
+.addProject {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+}
