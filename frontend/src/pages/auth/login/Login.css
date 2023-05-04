@@ -1,0 +1,31 @@
+form {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0.5rem;
+}
+
+.login,
+.register {
+	display: grid;
+	place-content: center;
+	height: 100vh;
+}
+
+.login-container,
+.register-container {
+	padding: 1rem;
+	width: 30vw;
+	text-align: center;
+	background-color: var(--bg-300);
+	border-radius: 5px;
+}
+
+input[type="submit"] {
+	background-color: var(--primary-200);
+	border-radius: 3px;
+	font-family: inherit;
+	color: var(--text-100);
+}
+input[type="submit"]:hover {
+	border-color: var(--primary-100);
+}
