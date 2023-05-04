@@ -1,4 +1,4 @@
-# Project Time Tracker
+\*\*\*\*# Project Time Tracker
 
 This is supposed to be a simple little web application that allows you to track the time you spend working on a project.
 You can add new projects to the overview and start the timer by clicking on the start button. Even if you close the browser the timer will keep running until you reopen the browser and press the pause button.
@@ -88,11 +88,19 @@ For now only the total amount of time is displayed.
 
 ### LOGIN
 
-- [ ] create routes for login
-- [ ] create middleware to verify user
-- [ ] create middleware to encrypt password
-- [ ] create token functionality to save in cookies
-- [ ] cookieparser
+- [x] create routes for login
+- [x] create middleware to verify user
+- [x] create middleware to encrypt password
+- [x] create token functionality to save in cookies
+- [x] install cookieparser
+- [ ] implement login validation
+- [ ] create login component
+
+### REGISTER
+
+- [x] create routes for register
+- [x] create validation schema for register
+- [ ] create register component
 
 ### Additional Features:
 
