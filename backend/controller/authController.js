@@ -16,13 +16,13 @@ export const login = async (req, res) => {
 		const db = await getDb();
 		const result = await db
 			.collection(COL)
-			.findOne({ email: user.email, password: user.email });
+			.findOne({ email: user.email, password: user.password });
 		if (result === null) {
 			throw new Error("Invalid user or password");
 		} else {
 			const token = createToken(result._id);
 			res.cookie("TOKEN", token, cookieConfig);
-			res.sendStatus(200).json({ message: "Successfully logged in " });
+			res.status(200).json({ message: "Successfully logged in " });
 		}
 	} catch (error) {
 		console.error(error);

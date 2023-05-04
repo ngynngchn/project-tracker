@@ -1,9 +1,8 @@
-import React, { useRef } from "react";
-
-import { Toaster } from "react-hot-toast";
 import "./Login.css";
-import Form from "../../../components/basic/form/login-form/Form";
+
 import { Link } from "react-router-dom";
+import Form from "../../../components/basic/form/login-form/Form";
+import { Toaster } from "react-hot-toast";
 
 function Login() {
 	return (
@@ -12,10 +11,11 @@ function Login() {
 				<h2>Welcome Back!</h2>
 				<h2>Please login!</h2>
 				<Form />
-				<Toaster />
 				<p>
-					Don't have an account yet? Register<Link to="/register">here</Link>.
+					Don't have an account yet?
+					<Link to="/register"> Create an account!</Link>
 				</p>
+				<Toaster />
 			</div>
 		</div>
 	);

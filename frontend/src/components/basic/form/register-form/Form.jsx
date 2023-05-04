@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 import Password from "../Password";
 
 function Form() {
+	const url = import.meta.env.VITE_BACKEND + import.meta.env.VITE_API_VERSION;
+
 	const nameRef = useRef();
 	const emailRef = useRef();
 	const passwordRef = useRef();
 	const confirmPasswordRef = useRef();
 
 	const navigate = useNavigate();
-
-	const url = import.meta.env.VITE_BACKEND + import.meta.env.VITE_API_VERSION;
 
 	const register = async (event) => {
 		event.preventDefault();
@@ -35,12 +35,8 @@ function Form() {
 					return response.text();
 				}
 			})
-			.then((data) => {
-				console.log(data);
-			})
-			.catch((error) => {
-				console.error(error);
-			});
+			.then((data) => console.log(data))
+			.catch((error) => console.error(error));
 
 		await toast.promise(createAccount, {
 			loading: "Checking Credentials",
