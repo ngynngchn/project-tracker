@@ -1,4 +1,4 @@
-\*\*\*\*# Project Time Tracker
+# Project Time Tracker
 
 This is supposed to be a simple little web application that allows you to track the time you spend working on a project.
 You can add new projects to the overview and start the timer by clicking on the start button. Even if you close the browser the timer will keep running until you reopen the browser and press the pause button.
