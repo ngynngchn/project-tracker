@@ -22,7 +22,7 @@ For now only the total amount of time is displayed.
 - Node.js
 - MongoDB
 
-## To-Do List
+## **To**-Do List
 
 1. Plan out the project requirements and user interface
    - Dashboard
@@ -83,6 +83,16 @@ For now only the total amount of time is displayed.
        ]
     }
     ```
+
+## Authentification and Authorization
+
+### LOGIN
+
+- [ ] create routes for login
+- [ ] create middleware to verify user
+- [ ] create middleware to encrypt password
+- [ ] create token functionality to save in cookies
+- [ ] cookieparser
 
 ### Additional Features:
 
