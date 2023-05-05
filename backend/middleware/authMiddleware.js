@@ -10,7 +10,7 @@ export const encryptPassword = (req, _, next) => {
 
 export const verifyJWTCookie = (req, res, next) => {
 	try {
-		const token = req.cookies.token;
+		const token = req.cookies.TOKEN;
 		req.user = verifyToken(token);
 		next();
 	} catch (error) {
