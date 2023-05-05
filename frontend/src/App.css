@@ -77,3 +77,14 @@ input {
 	gap: 0.5rem;
 	align-items: center;
 }
+
+.dashboard-icon {
+	font-size: 3rem;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-between;
+}

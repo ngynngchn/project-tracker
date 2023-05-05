@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Icon } from "@iconify/react";
+import "./Buttons.css";
 
 function AddButton() {
 	const [toggle, setToggle] = useState();

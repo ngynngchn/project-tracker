@@ -34,11 +34,15 @@
 	font-family: "Oswald";
 	src: url("./assets/fonts/Oswald-VariableFont_wght.ttf");
 }
+
 a {
 	font-weight: 500;
 	color: var(--bg-300);
 	text-decoration: inherit;
-	font-size: 3rem;
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
 }
 a:hover {
 	color: var(--primary-200);
@@ -58,25 +62,6 @@ h1 {
 	line-height: 1.1;
 }
 
-button {
-	display: flex;
-	align-items: center;
-	color: var(--text-200);
-	gap: 0.5rem;
-	border-radius: 8px;
-	border: 1px solid transparent;
-	padding: 4px 8px;
-	font-size: 1em;
-	font-weight: 500;
-	font-family: inherit;
-	background-color: var(--primary-200);
-	cursor: pointer;
-	transition: border-color 0.25s;
-}
-button:hover {
-	border-color: var(--primary-100);
-}
-button:focus,
-button:focus-visible {
-	outline: 4px auto -webkit-focus-ring-color;
+ul > li {
+	list-style-type: none;
 }
