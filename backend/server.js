@@ -3,7 +3,7 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
-import { checkSchema, validationResult } from "express-validator";
+import { checkSchema } from "express-validator";
 import {
 	addProject,
 	getProjects,
@@ -17,7 +17,7 @@ import {
 	validatePassword,
 	verifyJWTCookie,
 } from "./middleware/authMiddleware.js";
-import { login, register } from "./controller/authController.js";
+import { login, logout, register } from "./controller/authController.js";
 import { userSchema } from "./validation/userSchema.js";
 
 const PORT = process.env.PORT;
@@ -42,6 +42,7 @@ server.post("/api/v1/end-session", endSession);
 
 //* ====== AUTH ROUTES ======
 server.post("/api/v1/login", encryptPassword, login);
+server.get("/api/v1/logout", logout);
 server.post(
 	"/api/v1/register",
 	validatePassword,
@@ -50,7 +51,7 @@ server.post(
 	register
 );
 
-server.post("/api/v1/validate", verifyJWTCookie, (_, res) =>
+server.get("/api/v1/validate", verifyJWTCookie, (_, res) =>
 	res.sendStatus(200)
 );
 

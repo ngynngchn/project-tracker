@@ -30,6 +30,15 @@ export const login = async (req, res) => {
 	}
 };
 
+export const logout = async (_, res) => {
+	try {
+		res.cookie("TOKEN", "", { maxAge: 0 });
+		res.status(200).send("You successfully signed out");
+	} catch (error) {
+		console.error(error);
+	}
+};
+
 export const register = async (req, res) => {
 	try {
 		const validation = validationResult(req);
