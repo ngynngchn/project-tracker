@@ -36,8 +36,10 @@ function Form() {
 				}
 			})
 			.then((data) => console.log(data))
-			.catch((error) => console.error(error));
-
+			.catch((error) => {
+				console.error(error.message);
+				throw new Error(error.message);
+			});
 		await toast.promise(createAccount, {
 			loading: "Checking Credentials",
 			success: "Perfect! You signed up!",

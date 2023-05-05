@@ -30,14 +30,17 @@ function Form() {
 				}
 			})
 			.then((data) => console.log(data.message))
-			.catch((error) => console.error(error));
+			.catch((error) => {
+				console.error(error.message);
+				throw new Error(error.message);
+			});
 
 		await toast.promise(verifyCredentials, {
 			loading: "Logging in",
 			success: "Perfect! You logged in!!",
 			error: (err) => {
-				console.error(err);
-				return "Login failed! SORRY!!!";
+				console.error(err.message);
+				return "Login failed";
 			},
 		});
 	};
